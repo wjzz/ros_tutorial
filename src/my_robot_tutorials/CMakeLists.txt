@@ -129,13 +129,13 @@ include_directories(
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_executable(node_cpp src/my_first_node.cpp)
+add_executable(node_cpp src/01_my_first_node.cpp)
 target_link_libraries(node_cpp ${catkin_LIBRARIES})
 
-add_executable(publisher_cpp src/publisher.cpp)
+add_executable(publisher_cpp src/02_publisher.cpp)
 target_link_libraries(publisher_cpp ${catkin_LIBRARIES})
 
-add_executable(smartphone_cpp src/smartphone.cpp)
+add_executable(smartphone_cpp src/02_smartphone.cpp)
 target_link_libraries(smartphone_cpp ${catkin_LIBRARIES})
 
 ## Declare a C++ executable
