@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "publisher", ros::init_options::AnonymousNode);
+    ros::init(argc, argv, "publisher", ros::init_options::AnonymousName);
     ros::NodeHandle nh;
 
     ros::Publisher pub = nh.advertise<std_msgs::String>("/robot_news_radio", 10);
