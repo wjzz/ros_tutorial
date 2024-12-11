@@ -36,7 +36,7 @@ class Publisher:
 
 
 if __name__ == "__main__":
-    rospy.init_node("my_robot_publisher")
+    rospy.init_node("my_robot_publisher", anonymous=True)
     rospy.loginfo("Robot publisher started")
 
     rate = rospy.Rate(10)
