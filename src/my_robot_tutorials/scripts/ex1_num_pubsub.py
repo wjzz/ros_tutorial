@@ -36,7 +36,7 @@ def callback_receive_data(msg):
     number = msg.data
 
     counter.add_data_point(number)
-    counter.display_all()
+    counter.publish_total()
 
 
 if __name__ == "__main__":
