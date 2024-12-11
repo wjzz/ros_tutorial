@@ -36,7 +36,9 @@ class Publisher:
 
 
 if __name__ == "__main__":
-    rospy.init_node("my_robot_publisher", anonymous=True)
+    rospy.init_node(
+        "my_robot_publisher", anonymous=True
+    )  # anonymous makes it possible to run the same node multiple time
     rospy.loginfo("Robot publisher started")
 
     rate = rospy.Rate(10)
