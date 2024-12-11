@@ -6,3 +6,6 @@ from std_msgs.msg import String
 if __name__ == "__main__":
     rospy.init_node("my_robot_publisher")
     rospy.loginfo("Robot publisher started")
+
+    while not rospy.is_shutdown():
+        rospy.loginfo("Preparing a message")
