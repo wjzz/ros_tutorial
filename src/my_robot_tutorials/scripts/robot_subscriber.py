@@ -32,7 +32,7 @@ def callback_receive_data(msg):
     rospy.loginfo("Message received")
     rospy.loginfo(msg)
 
-    dictionary = json.loads(msg)
+    dictionary = json.loads(msg.data)
     robot = Robot(dictionary["id"], dictionary["velocity"])
 
     robotData.add_data_point(robot)
