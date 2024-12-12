@@ -3,7 +3,7 @@
 import rospy
 
 from my_robot_msgs.srv import SetLed
-import math
+from my_robot_msgs.msg import LedStatus
 
 
 class Leds:
@@ -15,6 +15,13 @@ class Leds:
 
     def print_all(self):
         print(self.leds)
+
+    def to_led_status(self) -> LedStatus:
+        result = LedStatus()
+        result.led1 = self.leds[0]
+        result.led2 = self.leds[1]
+        result.led3 = self.leds[2]
+        return result
 
 
 leds = Leds()
@@ -45,6 +52,13 @@ if __name__ == "__main__":
 
     rospy.loginfo("Service has been started")
 
-    rospy.spin()
+    rate = rospy.Rate(1)
+    publisher = rospy.Publisher("/led_Status", LedStatus, queue_size=10)
+
+    while not rospy.is_shutdown():
+        rospy.loginfo("Preparing a message")
+        rate.sleep()
+
+        publisher.publish_message(leds.to_led_status())
 
     rospy.loginfo("Service has been shut down")
