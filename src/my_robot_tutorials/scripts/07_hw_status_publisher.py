@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import rospy
-from my_robot_msgs import HardwareStatus
+from my_robot_msgs.msg import HardwareStatus
 
 if __name__ == "__main__":
     rospy.init_node("hardware publisher")
