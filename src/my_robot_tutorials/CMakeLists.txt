@@ -142,6 +142,9 @@ target_link_libraries(smartphone_cpp ${catkin_LIBRARIES})
 add_executable(add_two_ints_server src/05_my_first_service.cpp)
 target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 
+add_executable(add_two_ints_client src/05_my_first_service_client.cpp)
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
+
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
