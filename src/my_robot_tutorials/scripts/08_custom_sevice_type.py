@@ -7,7 +7,7 @@ import math
 
 
 def handle_compute_area(req):
-    result = req.radius * req.radius * math.PI
+    result = req.radius * req.radius * math.pi
     rospy.loginfo(f"Area of a disk of radius {req.radius} is {result}")
     return result
 
