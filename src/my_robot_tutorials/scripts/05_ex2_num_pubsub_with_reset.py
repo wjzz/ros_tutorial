@@ -2,7 +2,7 @@
 
 import rospy
 from std_msgs.msg import Int64
-from std_srvs import SetBool
+from std_srvs.srv import SetBool
 
 
 class Publisher:
