@@ -51,12 +51,14 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   HardwareStatus.msg
+  LedStatus.msg
 )
 
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
   ComputeDiskArea.srv
+  SetLed.srv
 )
 
 ## Generate actions in the 'action' folder
