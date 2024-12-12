@@ -4,7 +4,7 @@ import rospy
 from my_robot_msgs.msg import HardwareStatus
 
 if __name__ == "__main__":
-    rospy.init_node("hardware publisher")
+    rospy.init_node("hardware_publisher")
     rospy.loginfo("This node has been started")
 
     rate = rospy.Rate(10)  # 10 Hz
