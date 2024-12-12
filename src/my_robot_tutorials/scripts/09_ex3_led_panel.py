@@ -13,6 +13,9 @@ class Leds:
     def set_bit(self, led_number: int, bit: bool):
         self.leds[led_number] = bit
 
+    def print_all(self):
+        print(self.leds)
+
 
 leds = Leds()
 
@@ -27,6 +30,8 @@ def handle_set_led(req):
     rospy.loginfo("I will set led#{led_number} to {bit}")
 
     leds.set_bit(led_number, bit)
+
+    rospy.loginfo(f"Current state: {leds.print_all()}")
 
     return "OK"
 
