@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     // This is new
     double publish_frequency;
     nh.getParam("/number_publish_frequency", publish_frequency);
-    ros::Rate rate(publish_frequency;
+    ros::Rate rate(publish_frequency);
 
     nh.setParam("/another_param", 10);
 
