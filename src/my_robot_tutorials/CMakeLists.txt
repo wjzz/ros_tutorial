@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  rospy_tutorials
 )
 
 ## System dependencies are found with CMake's conventions
@@ -137,6 +138,9 @@ target_link_libraries(publisher_cpp ${catkin_LIBRARIES})
 
 add_executable(smartphone_cpp src/02_smartphone.cpp)
 target_link_libraries(smartphone_cpp ${catkin_LIBRARIES})
+
+add_executable(add_two_ints_server src/05_my_first_service.cpp)
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
