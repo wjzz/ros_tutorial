@@ -17,9 +17,9 @@ def call_service(led_number: int, bit: bool):
 
 
 if __name__ == "__main__":
-    rospy.init_node("compute_area_client")
+    rospy.init_node("set_led_client")
 
-    rospy.wait_for_service("/compute_area")
+    rospy.wait_for_service("/set_led")
 
     while True:
         # battery is charged
