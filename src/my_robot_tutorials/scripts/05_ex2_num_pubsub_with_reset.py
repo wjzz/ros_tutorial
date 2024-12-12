@@ -47,11 +47,9 @@ def handle_reset(_req):
     rospy.loginfo("Got a reset request")
     counter.reset()
 
-    # TODO what to return?
-    response = SetBool()
-    response.success = True
-    response.message = "Counter was reset"
-    return response
+    success = True
+    message = "Counter was reset"
+    return [success, message]
 
 
 if __name__ == "__main__":
