@@ -27,11 +27,12 @@ def handle_set_led(req):
     if led_number not in [0, 1, 2]:
         return f"Error: wrong led number {led_number}"
 
-    rospy.loginfo("I will set led#{led_number} to {bit}")
+    rospy.loginfo(f"I will set led#{led_number} to {bit}")
 
     leds.set_bit(led_number, bit)
 
-    rospy.loginfo(f"Current state: {leds.print_all()}")
+    rospy.loginfo("Current state:")
+    leds.print_all()
 
     return "OK"
 
