@@ -10,8 +10,8 @@ int main(int argc, char **argv)
     ros::ServiceClient client = nh.serviceClient<rospy_tutorials::AddTwoInts>("/add_two_ints");
 
     rospy_tutorials::AddTwoInts srv;
-    srv.a = 123;
-    srv.b = 100;
+    srv.request.a = 123;
+    srv.request.b = 100;
 
     ROS_INFO("Sending request");
     if (client.call(srv))
