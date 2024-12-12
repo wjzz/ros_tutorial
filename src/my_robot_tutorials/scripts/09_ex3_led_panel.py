@@ -59,6 +59,6 @@ if __name__ == "__main__":
         rospy.loginfo("Preparing a message")
         rate.sleep()
 
-        publisher.publish_message(leds.to_led_status())
+        publisher.publish(leds.to_led_status())
 
     rospy.loginfo("Service has been shut down")
