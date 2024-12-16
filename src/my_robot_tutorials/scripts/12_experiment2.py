@@ -16,6 +16,8 @@ def callback_receive_data2(msg):
     rospy.loginfo("2: Message received")
     rospy.loginfo(msg)
     rospy.loginfo(f"handler= {threading.get_ident()}")
+    while True:
+        pass
 
 
 if __name__ == "__main__":
