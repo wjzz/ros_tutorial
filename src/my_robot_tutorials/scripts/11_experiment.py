@@ -19,11 +19,20 @@ def handle_add_two_ints(req):
     return result
 
 
+def handle_add_two_ints2(req):
+    result = req.a + req.b
+    rospy.loginfo(f"Sum of {req.a} and {req.b} is {result}")
+    rospy.loginfo(f"handler2= {threading.get_ident()}")
+
+    return result
+
+
 if __name__ == "__main__":
     rospy.init_node("led_status_server")
     rospy.loginfo("Led status server created")
 
     rospy.Service("/add_two_ints", AddTwoInts, handle_add_two_ints)
+    rospy.Service("/add_two_ints2", AddTwoInts, handle_add_two_ints2)
 
     rospy.loginfo("Service has been started")
 
