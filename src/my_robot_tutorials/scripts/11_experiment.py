@@ -15,10 +15,6 @@ def handle_add_two_ints(req):
     return result
 
 
-def handle_call(req):
-    return "OK"
-
-
 if __name__ == "__main__":
     rospy.init_node("led_status_server")
     rospy.loginfo("Led status server created")
@@ -37,5 +33,7 @@ if __name__ == "__main__":
         msg = String()
         msg.data = "Hello"
         publisher.publish(msg)
+        while True:
+            pass
 
     rospy.loginfo("Service has been shut down")
