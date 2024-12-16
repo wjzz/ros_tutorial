@@ -8,10 +8,14 @@ from std_msgs.msg import String
 
 from rospy_tutorials.srv import AddTwoInts
 
+import threading
+
 
 def handle_add_two_ints(req):
     result = req.a + req.b
     rospy.loginfo(f"Sum of {req.a} and {req.b} is {result}")
+    rospy.loginfo(f"handler= {threading.get_ident()}")
+
     return result
 
 
@@ -33,7 +37,6 @@ if __name__ == "__main__":
         msg = String()
         msg.data = "Hello"
         publisher.publish(msg)
-        while True:
-            pass
+        rospy.loginfo(f"main = {threading.get_ident()}")
 
     rospy.loginfo("Service has been shut down")
