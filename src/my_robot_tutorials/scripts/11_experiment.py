@@ -15,7 +15,8 @@ def handle_add_two_ints(req):
     result = req.a + req.b
     rospy.loginfo(f"Sum of {req.a} and {req.b} is {result}")
     rospy.loginfo(f"handler= {threading.get_ident()}")
-
+    while True:
+        pass
     return result
 
 
