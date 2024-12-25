@@ -43,9 +43,7 @@ if __name__ == "__main__":
     rospy.init_node("robot_subscriber")
     rospy.loginfo("Robot Subscriber started")
 
-    rate = rospy.Rate(10)  # 10 Hz
-
-    pub = rospy.Subscriber("/robot_news", String, callback_receive_data)
+    rospy.Subscriber("/robot_news", String, callback_receive_data)
 
     rospy.spin()
 
