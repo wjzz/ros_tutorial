@@ -1,0 +1,7 @@
+services:
+  noetic_setup:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: ros-dev
+    tty: true
